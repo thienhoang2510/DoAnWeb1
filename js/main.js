@@ -17,6 +17,8 @@
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
     });
+
+    
     
     
     // Back to top button
@@ -235,5 +237,6 @@
             $('#' + checkbox_id + '-show').slideDown();
         }
     });
+    
 })(jQuery);
 
