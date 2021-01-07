@@ -20,6 +20,7 @@ a:focus {
     text-decoration: none;
 }
 
+
 h1 {
     font-family: 'Source Code Pro', monospace;
     font-weight: 900;
@@ -76,6 +77,7 @@ h2 {
     border: 1px solid #dddddd;
     margin-bottom: 15px
 }
+
 
 .form-control:focus,
 .custom-select:focus {
