@@ -1,0 +1,110 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/template-overviews/shop-homepage)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+
+/**********************************************************************************/
+/*===============================================================================
+       [ CSS INDEX ]
+ =================================================================================
+ 
+     reset
+     typography
+     helper class
+     button
+     section-title
+     slide-activation
+     social-icon
+     popup
+     cartbox
+     setting-box
+     header
+     navigation
+
+
+
+ /*space from navbar*/
+ body {
+  padding-top: 56px;
+}
+
+
+/* header */
+.nav-icons-container .nav-icon
+{
+
+margin-right: 10px;
+}
+.nav-icons-container .username
+{
+  color: rgb(224, 218, 218);
+  text-decoration: none;
+}
+
+.nav-icon a{
+  position: relative;
+}
+.nav-icon a i{
+  font-size: 20px;
+  color: rgb(224, 218, 218);
+}
+.nav-icon a .badge{
+  position: absolute;
+  top: -10px;
+  right:-12px;
+  background-color: #9149b9;
+  color: #fff;
+  border-radius: 100%;
+}
+
+.dropdown-toggle::after{
+  display: none;
+}
+
+.active{
+  color: white;
+}
+/* /-header */
+
+
+/* chitietsp */
+.chitietsp .chitietright {
+border: 1px solid black;
+}
+/* /chitietsp */
+
+
+/* footer */
+footer{
+
+}
+/* /-footer */
+
+
+/* display itemcard */
+.card img{
+  width: 252.98px;
+  height: 252.98px;
+  }
+
+.minicard img{
+width: 139px;
+height: 139px;
+}
+/* /display itemcard */
+
+
+/* sidebar tiem kiem nang cao */
+.sidebartknc .list-group{
+  max-height: 250px ;
+  overflow-y: scroll;
+}
+/* sidebar tiem kiem nang cao */
+
+/* sidebar  */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* sidebar */
