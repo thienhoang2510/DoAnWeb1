@@ -3,7 +3,7 @@ $sql = "select * from loaisanpham";
 $result = DataProvider::ExecuteQuery($sql);
 ?>
 
-
+<hr>
 <h3 class="my-1">Loại sản phẩm</h3>
 
 
