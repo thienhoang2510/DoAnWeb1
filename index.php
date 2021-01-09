@@ -28,15 +28,10 @@ $_SESSION["path"] = $_SERVER["REQUEST_URI"];
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- custom JavaScript -->
   <script src="js/myjs.js"></script>
-
 </head>
-
 <body>
-
   <?php
   include "modules/mHeader.php";
-
-
   $layout = 1;
   if (isset($_GET["layout"]) == true) #nếu có tham số truyền vào, mặc định là homea
     $layout = $_GET["layout"];
@@ -54,11 +49,8 @@ $_SESSION["path"] = $_SERVER["REQUEST_URI"];
       include "pages/p404error.php";
       break;
   }
-
   include "modules/mFooter.php";
   ?>
-
-.
 </body>
 
 </html>
