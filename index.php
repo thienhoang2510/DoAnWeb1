@@ -29,7 +29,6 @@ $_SESSION["path"] = $_SERVER["REQUEST_URI"];
   <!-- custom JavaScript -->
   <script src="js/myjs.js"></script>
 
-
 </head>
 
 <body>
