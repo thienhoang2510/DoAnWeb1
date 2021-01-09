@@ -6,7 +6,7 @@
        <span class="err" id="eUS"></span>
    </div>
    <div>
-       <span class="lable">Mật Khẩu:</span>
+       <span class="lable">Mật khẩu:</span>
        <input type="password" id="ps" name="ps"/>
        <span class="err" id="ePS"></span>
    </div>
