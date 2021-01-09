@@ -22,7 +22,7 @@ try {
     $mail->CharSet    =	'UTF-8';
 
     //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
+    $mail->setFrom('doanwebbanhangltweb@gmail.com', 'Mailer');
     $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
 
     // Content
