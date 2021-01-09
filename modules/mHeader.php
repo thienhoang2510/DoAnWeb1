@@ -38,7 +38,7 @@ $side = $_GET["side"];
 
 
         <form class="input-group" action="index.php?layout=1&side=2&content=5" method="post">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Search" name="searchTxt">
           <div class="input-group-append">
             <button class="btn btn-info" type="submit"><i class="fa fa-search"></i></button>
           </div>
