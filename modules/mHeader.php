@@ -12,7 +12,7 @@ $side = $_GET["side"];
   <div class="container">
     <a class="navbar-brand" href="index.php"><strong>Shoes Store</strong></a>
 <a href="index.html">
-                                <img src="imgs/logo/logo.png" alt="Logo">
+                                <img src="imgs/logo/logo.jpg" alt="Logo">
                             </a>
     <!-- mobile button  -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
