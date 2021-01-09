@@ -14,13 +14,13 @@
                 <img class="d-block img-fluid" src="images/sanpham/logonike.jpg" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block img-fluid" src="images/sanpham/logoadida.jpg" alt="Third slide">
+                <img class="d-block img-fluid" src="images/sanpham/logoadidas.jpg" alt="Third slide">
               </div>
               <div class="carousel-item">
                 <img class="d-block img-fluid" src="images/sanpham/logoconverse.jpg" alt="Fourth slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block img-fluid" src="images/sanpham/logonike.jpg" alt="Fifth slide">
+                <img class="d-block img-fluid" src="images/sanpham/logovans.jpg" alt="Fifth slide">
               </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
