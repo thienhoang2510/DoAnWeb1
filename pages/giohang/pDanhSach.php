@@ -1,4 +1,5 @@
 <div id="quanlygiohang">
+   <hr>
    <center><h1>Quản lý giỏ hàng</h1></center>
    <center><table>
        <tr width=200>
