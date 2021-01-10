@@ -83,9 +83,17 @@
                         </th>
                     </tr>
 
-
                     <tr>
-                      
+                        <th class="right">
+                            <div>
+                                <span class="lable">Điện thoại:</span>
+                                <input type="text" id="tel" name="tel"/>
+                                <span class="err" id="eTEL"></span>
+                            </div>
+                        </th>
+                    </tr>
+     
+                    <tr>
                         <th class="right">
                             <div>
                                <span class="lable">Email:</span>
