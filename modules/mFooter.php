@@ -63,9 +63,9 @@
                     <div class="col-md-6">
                         <div class="payment-security">
                             <h2>Xác nhận bởi:</h2>
-                            <img src="imgs/icons/godaddy.svg" alt="Payment Security" />
-                            <img src="imgs/icons/norton.svg" alt="Payment Security" />
-                            <img src="imgs/icons/ssl.svg" alt="Payment Security" />
+                            <img src="imgs/icons/godaddy.svg" weight=30px height=30px alt="Payment Security" />
+                            <img src="imgs/icons/norton.svg" weight=30px height=30px alt="Payment Security" />
+                            <img src="imgs/icons/ssl.svg" weight=30px height=30px alt="Payment Security" />
                         </div>
                     </div>
                 </div>
