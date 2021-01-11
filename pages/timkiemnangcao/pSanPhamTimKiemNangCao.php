@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['searchTxt'])) { //nội dung tìm kiếm
     $value = $_POST['searchTxt'];
-    $sql = "select * from sanpham where TenSanPham like '%$value%'";
+    $sql = "select * from sanpham where BiXoa = 0 and TenSanPham like '%$value%'";
     $result = DataProvider::ExecuteQuery($sql);
 } else {
     $sql = "SELECT * FROM sanpham WHERE BiXoa = 0";
