@@ -1,6 +1,6 @@
 <?php
 
-$sql = "select * from sanpham order by NgayNhap desc";
+$sql = "select * from sanpham where BiXoa = 0 order by NgayNhap desc";
 $result = DataProvider::ExecuteQuery($sql);
 ?>
    
