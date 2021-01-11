@@ -40,7 +40,8 @@
           $id = $row1["MaTaiKhoan"];
           sendEmail($mail,'Kích hoạt tài khoản','Vui lòng click vào link <a href="http://acctive:8080/activate.php?id=' . $id . '&code=' . $code . '"> kích hoạt tài khoản.</a>');
 
-          phpAlert(   "Tiến hành xác thực trước khi đăng nhập! \n\n"   );
+          $msg = "Vui lòng xác thực tài khoản trước khi đăng nhập!";
+          echo '<script type="text/javascript">alert("' . $msg . '")</script>';
 
           $newURL = '../../index.php';
           header('Refresh: 0;../../index.php');
@@ -88,9 +89,6 @@ function sendEmail($to, $subject, $content) {
       echo 'Message has been sent';
   } catch (Exception $e) {
       echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"; }
-}
-function phpAlert($msg) {
-  echo '<script type="text/javascript">alert("' . $msg . '")</script>';
 }
 ?>
 
