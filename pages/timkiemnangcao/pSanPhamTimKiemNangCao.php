@@ -6,6 +6,7 @@ if (isset($_POST['searchTxt'])) { //nội dung tìm kiếm
 } else {
     $sql = "SELECT * FROM sanpham WHERE BiXoa = 0";
     $result = DataProvider::ExecuteQuery($sql);
+    $value = '';
 }
 ?>
 
@@ -48,7 +49,7 @@ if (isset($_POST['searchTxt'])) { //nội dung tìm kiếm
             // Tìm Start
             $start = ($current_page - 1) * $limit;
     
-            $sql = "SELECT * FROM sanpham LIMIT $start, $limit";
+            $sql = "select * from sanpham where TenSanPham like '%$value%' LIMIT $start, $limit";
             $result = DataProvider::ExecuteQuery($sql);
 
             while ($row = mysqli_fetch_array($result)) {
