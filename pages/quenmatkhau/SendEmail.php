@@ -11,7 +11,7 @@
    {
        $us = $_POST["us"];
        $mail = $_POST["mail"];
-          sendEmail($mail,'Đổi mật khẩu', 'Click vào link: <a href="http://acctive:8080/pages/quenmatkhau/pDoimatkhau.php?us=' . $us . '"> Đổi mật khẩu.</a>');
+          sendEmail($mail,'Đổi mật khẩu', 'Click vào link: <a href="http://web1:8080/pages/quenmatkhau/pDoimatkhau.php?us=' . $us . '"> Đổi mật khẩu.</a>');
    }
    else{
        DataProvider::ChangeURL("../../index.php?layout=404");
