@@ -110,7 +110,7 @@ $side = $_GET["side"];
               </form>
               <div class="dropdown-divider mt-0"></div>
               <a class="dropdown-item" href="./index.php?layout=3">Đăng ký tài khoản</a>
-              <a class="dropdown-item" href="">Quên mật khẩu</a>
+              <a class="dropdown-item" href="./index.php?layout=4">Quên mật khẩu</a>
 
             </div>
           </div>
