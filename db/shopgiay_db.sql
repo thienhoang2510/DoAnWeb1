@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th1 08, 2021 lúc 08:45 AM
+-- Thời gian đã tạo: Th1 11, 2021 lúc 01:12 PM
 -- Phiên bản máy phục vụ: 5.7.31
 -- Phiên bản PHP: 7.3.21
 
@@ -53,6 +53,7 @@ INSERT INTO `chitietdondathang` (`MaChiTietDonDatHang`, `SoLuong`, `GiaBan`, `Ma
 ('08101200103', 1, 15000000, '081012001', 9),
 ('08101200200', 1, 23000000, '081012002', 7),
 ('08101200300', 2, 7900000, '081012003', 10),
+('11012100100', 1, 1499000, '110121001', 35),
 ('13121200100', 4, 43900000, '131212001', 4),
 ('13121200200', 1, 37000000, '131212002', 5),
 ('13121200201', 2, 260000, '131212002', 11);
@@ -80,11 +81,12 @@ CREATE TABLE IF NOT EXISTS `dondathang` (
 --
 
 INSERT INTO `dondathang` (`MaDonDatHang`, `NgayLap`, `TongThanhTien`, `MaTaiKhoan`, `MaTinhTrang`) VALUES
-('080121001', '2021-01-08 09:04:02', 43800000, 8, 1),
+('080121001', '2021-01-08 09:04:02', 43800000, 8, 3),
 ('080121002', '2021-01-08 10:01:53', 18000000, 2, 1),
 ('081012001', '2019-10-08 00:00:00', 380000, 6, 2),
 ('081012002', '2019-10-08 00:00:00', 380000, 6, 2),
 ('081012003', '2019-10-08 00:00:00', 440000, 1, 2),
+('110121001', '2021-01-11 09:18:02', 1499000, 2, 1),
 ('131212001', '2019-12-13 00:00:00', 640000, 6, 1),
 ('131212002', '2019-12-13 00:00:00', 700000, 6, 2);
 
@@ -114,7 +116,7 @@ INSERT INTO `hangsanxuat` (`MaHangSanXuat`, `TenHangSanXuat`, `LogoURL`, `BiXoa`
 (4, 'Converse', 'logoconverse', 0),
 (5, 'Nike', 'logonike.jpg', 0),
 (6, 'Supra', 'logosupra.jpg', 0),
-(7, 'Palladium', 'logopalladium.jpg', 0);
+(7, 'Palladium', 'logopalladium.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -188,17 +190,17 @@ CREATE TABLE IF NOT EXISTS `sanpham` (
   PRIMARY KEY (`MaSanPham`),
   KEY `fk_SanPham_LoaiSanPham1_idx` (`MaLoaiSanPham`),
   KEY `fk_SanPham_HangSanXuat1_idx` (`MaHangSanXuat`)
-) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `sanpham`
 --
 
 INSERT INTO `sanpham` (`MaSanPham`, `TenSanPham`, `HinhURL`, `GiaSanPham`, `NgayNhap`, `SoLuongTon`, `SoLuongBan`, `SoLuocXem`, `MoTa`, `BiXoa`, `MaLoaiSanPham`, `MaHangSanXuat`) VALUES
-(4, 'Superstar', 'adidas1.jpg', 2400000, '2021-01-08 00:00:00', 20, 15, 27, 'Có dây buộc\r\nThân giày bằng da\r\nBiểu tượng giày da', 0, 5, 1),
+(4, 'Superstar', 'adidas1.jpg', 2400000, '2021-01-08 00:00:00', 20, 15, 29, 'Có dây buộc\r\nThân giày bằng da\r\nBiểu tượng giày da', 0, 5, 1),
 (5, 'Continental 80', 'adidas2.jpg', 2500000, '2019-05-01 00:00:00', 21, 11, 32, 'Ôm vừa\r\nCó dây buộc\r\nThân giày bằng da cật\r\nĐế cupsole bằng cao su phân tách \r\nLớp lót bằng vải thun da cá\r\nLót giày OrthoLite® Đệm đế giữa bằng chất liệu EVA nhẹ\r\nMàu sản phẩm: Cloud White / Scarlet / Collegiate Navy', 0, 5, 1),
 (7, 'Ultraboost 20', 'adidas3.jpg', 5000000, '2019-09-12 00:00:00', 25, 2, 9, 'Vừa vặn như đi tất\r\nCó dây buộc\r\nThân giày bằng vải dệt\r\nLớp lót bằng vải dệt\r\nĐế giữa công nghệ Boost\r\nTrọng lượng: 310 g \r\nĐế ngoài công nghệ Stretchweb\r\nMàu sản phẩm: Core Black / Iron Metallic / Football Blue', 0, 5, 1),
-(8, 'Untra 4D 5', 'adidas4.jpg', 6000000, '2019-07-03 00:00:00', 30, 0, 8, 'Dáng regular fit\r\nCó dây buộc\r\nThân giày bằng vải dệt\r\nĐế giữa adidas 4D\r\nĐế ngoài bằng cao su Continental™\r\nTrọng lượng: 369 gram \r\nLớp lót bằng vải dệt\r\nMàu sản phẩm: Core Black / Core Black / Carbon', 0, 5, 1),
+(8, 'Untra 4D 5', 'adidas4.jpg', 6000000, '2019-07-03 00:00:00', 30, 0, 9, 'Dáng regular fit\r\nCó dây buộc\r\nThân giày bằng vải dệt\r\nĐế giữa adidas 4D\r\nĐế ngoài bằng cao su Continental™\r\nTrọng lượng: 369 gram \r\nLớp lót bằng vải dệt\r\nMàu sản phẩm: Core Black / Core Black / Carbon', 0, 5, 1),
 (9, 'Ultraboost 20 DNA', 'adidas5.jpg', 5000000, '2019-01-01 00:00:00', 24, 6, 20, 'Vừa vặn như đi tất\r\nCó dây buộc\r\nThân giày bằng vải dệt\r\nLớp lót bằng vải dệt\r\nĐế giữa công nghệ Boost\r\nTrọng lượng: 310 g \r\nĐế ngoài công nghệ Stretchweb làm từ cao su Continental™\r\nPrimeblue\r\nMàu sản phẩm: Dash Grey / Silver Metallic / Halo Silver', 0, 7, 1),
 (10, 'Fluidstreet', 'adidas6.jpg', 1500000, '2019-08-15 00:00:00', 28, 7, 9, 'Ôm vừa\r\nCó dây buộc\r\nThân giày bằng vải lưới\r\nCảm giác thoáng khí\r\nGiày chạy bộ siêu nhẹ\r\nĐế giữa công nghệ đệm Cloudfoam\r\nĐế ngoài bằng cao su\r\nMàu sản phẩm: Core Black / Cloud White / Core Black', 0, 3, 1),
 (11, 'Galaxy 5', 'adidas7.jpg', 1400000, '2019-09-01 00:00:00', 38, 3, 41, 'Ôm vừa\r\nCó dây buộc\r\nThân giày bằng vải lưới\r\nCảm giác nhẹ nhàng\r\nGiày chạy bộ thoáng khí\r\nLót giày OrthoLite® và lớp lót bằng vải dệt\r\nĐế giữa công nghệ đệm Cloudfoam và đế ngoài bằng cao su\r\nMàu sản phẩm: Grey Five / Core Black / Cloud White', 0, 8, 1),
@@ -225,12 +227,12 @@ INSERT INTO `sanpham` (`MaSanPham`, `TenSanPham`, `HinhURL`, `GiaSanPham`, `Ngay
 (32, 'Balenciaga Triple S Clear Full Black', 'balenciaga28.jpg', 4500000, '2019-10-06 00:00:00', 3, 0, 0, 'Thiết kế to, nặng\r\nSử sụng công nghệ đế AIR được tích hợp nhằm giảm tối đa trọng lượng của sản phẩm\r\nPhong cách thiết kế theo kiểu chunky\r\nPhần upper bằng da dê kết hợp với lưới', 0, 1, 2),
 (33, 'Balenciaga Speed Trainer Clear Sole', 'balenciaga29.jpg', 2700000, '2019-10-06 00:00:00', 4, 2, 5, 'Phần upper thiết kế theo kiểu như một chiếc tất\r\nKết hợp 2 loại chất liệu Polyamide, Elastan được trộn với tỉ lệ 8 :2\r\nPhần đế được sử dụng chất liệu cao su tự nhiều', 0, 3, 2),
 (34, 'Balenciga Triple S Pink Yellow ', 'balenciaga30.jpg', 4500000, '2019-12-04 00:00:00', 5, 5, 7, 'Tổng quan to, nặng\r\nThiết kế hầm hố, phá cách\r\nChất liệu da bền, đẹp\r\nBên trong sử dụng chất liệu vải mềm cực kỳ thoáng khí, giúp đôi chân luôn khô, thoải mái\r\nSự kết hợp giữa màu vàng và màu hồng mang lại cảm giác mềm lại, phá cách cho người dùng\r\n\r\n', 0, 7, 2),
-(35, 'Vans Old Skool Classic Black/White', 'vans35.jpg', 1499000, '2021-01-07 20:35:30', 10, 22, 80, 'Kiểu dáng Vans Old Skool cổ thấp cho sự tiện lợi khi mang tháo và linh hoạt khi vận động. Tone đen basic huyền bí tạo cảm giác mạnh mẽ, cho bạn một vẻ ngoài cá tính. Phần upper được làm kết hợp hai chất liệu là Canvas và Suede, cho độ bền bỉ tốt.', 0, 4, 3),
+(35, 'Vans Old Skool Classic Black/White', 'vans35.jpg', 1499000, '2021-01-07 20:35:30', 9, 22, 81, 'Kiểu dáng Vans Old Skool cổ thấp cho sự tiện lợi khi mang tháo và linh hoạt khi vận động. Tone đen basic huyền bí tạo cảm giác mạnh mẽ, cho bạn một vẻ ngoài cá tính. Phần upper được làm kết hợp hai chất liệu là Canvas và Suede, cho độ bền bỉ tốt.', 0, 4, 3),
 (36, 'Vans UA SK8-Hi Reissue Flame ', 'vans36.jpg', 2000000, '2021-01-07 20:35:30', 9, 22, 43, 'Kiểu dáng chú trọng đến sự thoải mái, phóng khoáng, đi kèm là cổ giày được đệm lớp lót êm ái, mềm mại. Ngoài ra, thiết kế SK8-Hi được tạo bởi phần Upper bằng vải Canvas, nổi bật là hình ảnh ngọn lửa mang đậm dấu ấn của nền văn hóa Punk Rock. Vans Flame SK8-Hi mang tinh thần mạnh mẽ, sắc bén của họa tiết “Flame”.', 0, 4, 3),
 (37, 'Vans UA Era MoMA', 'vans37.jpg', 2200000, '2021-01-07 20:35:30', 10, 22, 56, 'BST Vans MoMA Era ra mắt gây ấn tượng với bức tranh “The Scream” mang đậm dấu ấn nghệ thuật. Mẫu giày mang tính biểu tượng với phần Upper Canvas được in toàn bộ bức tranh “The Scream” of Edvard Munch bằng công nghệ hiện đại. Đặc biệt với phối màu hiệu quả làm nổi bật tác phẩm nghệ thuật, cùng với đế cao su bánh quế chống trơn trượt hiệu quả.', 0, 5, 3),
 (38, 'Vans UA Old Skool Tiger Floral', 'vans38.jpg', 1750000, '2021-01-07 20:35:30', 5, 5, 99, 'Không phụ lòng mong mỏi của các fan, lần này Vans lại cho ra mắt BST mới với họa tiết Tiger Floral bắt mắt. Sự kết hợp độc đáo của hai họa tiết “Hoa” và “Hổ” tưởng chừng như không liên quan lại làm nên một tổ hợp cực kì ăn ý và hài hòa. Kỹ thuật in Allover với công nghệ hiện đại đã giúp thành quả sáng tạo của các nhà thiết kế đến gần hơn với công chúng.', 0, 7, 3),
 (39, 'Vans UA SK8-Hi Racer Edge', 'vans39.jpg', 1850000, '2021-01-07 20:35:30', 8, 4, 6, 'Vans SK8-Hi Racer Edge nổi bật với thiết kế những đường sọc đặc trưng, mô tả sống động biểu tượng của tốc độ bên cạnh là logo thương hiệu thu hút. Vans Racer Edge hỗ trợ cho các tay trượt ván một cách linh hoạt, mạnh mẽ.', 0, 6, 3),
-(40, 'Vans UA SK8-Low', 'vans40.jpg', 1650000, '2021-01-07 20:35:30', 6, 7, 77, 'Kiểu dáng Vans SK8-Low cổ thấp cho sự tiện lợi khi mang tháo và linh hoạt khi vận động. Màu sắc Egret nhẹ nhàng, tinh tế cho tạo cảm giác dễ chịu cho người nhìn. Chất liệu kết hợp giữa vải Canvas và Suede cho độ bền chắc cao. Mặt đế Waffle truyền thống tạo độ bám, tăng ma sát giúp chống trơn trượt tốt.', 0, 4, 3),
+(40, 'Vans UA SK8-Low', 'vans40.jpg', 1650000, '2021-01-07 20:35:30', 6, 7, 78, 'Kiểu dáng Vans SK8-Low cổ thấp cho sự tiện lợi khi mang tháo và linh hoạt khi vận động. Màu sắc Egret nhẹ nhàng, tinh tế cho tạo cảm giác dễ chịu cho người nhìn. Chất liệu kết hợp giữa vải Canvas và Suede cho độ bền chắc cao. Mặt đế Waffle truyền thống tạo độ bám, tăng ma sát giúp chống trơn trượt tốt.', 0, 4, 3),
 (41, 'Vans UA Old Skool 36 Factory Skulls', 'vans41.jpg', 2200000, '2021-01-07 20:35:30', 6, 4, 101, 'Vans Old Skool 36 DX Anaheim Factory Skulls lột xác với thiết kế họa tiết đầu lâu xương chéo đầy mới lạ, phần đế trắng ngà cổ điển đồng bộ với màu sắc của thân giày tạo điểm nhấn “ăn tiền” cho thiết kế. Form dáng Old Skool cứng cáp trẻ trung, lớp đệm lót OrthoLite tạo độ êm ái thoải mái cho đôi bàn chân', 0, 5, 3),
 (42, 'Vans UA SK8-Hi Ouroboros', 'vans42.jpg', 2500000, '2021-01-07 20:35:30', 12, 10, 133, 'Kiểu dáng Vans SK8-Hi Ouroboros cổ cao trẻ trung kết hợp cùng họa tiết OUROBOROS biểu trưng được bố trí bên hông thân giày tạo điểm nhấn ấn tượng cho dòng sản phẩm. Upper sử dụng chất liệu vải dệt thoáng khí tạo độ êm ái cho đôi chân khi vận động', 0, 23, 3),
 (43, 'Vans UA Era Ouroboros', 'vans43.jpg', 2000000, '2021-01-07 20:35:30', 12, 7, 115, 'Vans Era Ouroboros là một bức tranh được đầu từ kỹ lưỡng khi sử dụng hình tượng OUROBOROS - một trong những biểu tượng linh thiêng của người Ai Cập cổ đại nhằm mang đến những trải nghiệm mới lạ. Kiểu dáng Era cổ điển càng làm tăng thêm độ Cool cho thiết kế.', 0, 21, 3),
@@ -284,7 +286,8 @@ INSERT INTO `sanpham` (`MaSanPham`, `TenSanPham`, `HinhURL`, `GiaSanPham`, `Ngay
 (91, 'Palladium Pampalicious Starlight Blue', 'palla91.jpg', 2350000, '2021-01-07 20:35:30', 56, 43, 234, 'Với kiến thức về chất liệu trong công nghiệp chế tạo bánh xe máy bay, đã tạo nên những chiếc đế bền bỉ, kết hợp với cách thiết kế độc đáo, dễ dàng phối hợp nhiều loại trang phục, giá bán lại hợp lý, đáp ứng mọi yêu cầu từ các bạn trẻ.', 0, 7, 7),
 (92, 'Palladium Pampa Ox', 'palla92.jpg', 2100000, '2021-01-07 20:35:30', 32, 5, 53, 'Với kiến thức về chất liệu trong công nghiệp chế tạo bánh xe máy bay, đã tạo nên những chiếc đế bền bỉ, kết hợp với cách thiết kế độc đáo, dễ dàng phối hợp nhiều loại trang phục, giá bán lại hợp lý, đáp ứng mọi yêu cầu từ các bạn trẻ.', 0, 7, 7),
 (94, 'Supra Breaker', 'supra94.jpg', 2200000, '2021-01-07 20:35:30', 12, 22, 78, 'Thiết kế cổ cao hiện đại được cải tiến nâng cấp tối ưu về mặt kiểu dáng. Thân giày được làm từ da lộn và da Pu mềm mại giúp cho đôi chân luôn được thoải mái. Nội thất bên trong là bộ đệm SUPRAFOAM êm nhẹ độc quyền, iconic hình vương miệng mang ý nghĩa biểu tượng được phố trí ở lưỡi gà, dây đai, phía sau thân giày tạo điểm nhấn nổi bật cho dòng sản phẩm.', 0, 6, 6),
-(95, 'Supra Lizard', 'supra95.jpg', 2200000, '2021-01-07 20:35:30', 23, 44, 234, 'Tông màu xanh kết hợp với các chi tiết được nhấn nhá bằng màu đỏ nổi bật xung quanh đế giày cũng như ở phía sau gót giày. Toàn bộ phần thân trước của giày được làm từ chất liệu da lộn với các lỗ thoáng khí nhỏ để bạn cảm nhận được sự thông thoáng, êm ái từ bên trong.', 0, 6, 6);
+(95, 'Supra Lizard', 'supra95.jpg', 2200000, '2021-01-07 20:35:30', 23, 44, 234, 'Tông màu xanh kết hợp với các chi tiết được nhấn nhá bằng màu đỏ nổi bật xung quanh đế giày cũng như ở phía sau gót giày. Toàn bộ phần thân trước của giày được làm từ chất liệu da lộn với các lỗ thoáng khí nhỏ để bạn cảm nhận được sự thông thoáng, êm ái từ bên trong.', 0, 6, 6),
+(96, 'abc', NULL, 1000, '2021-01-11 02:52:10', 1, NULL, NULL, '2', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -304,20 +307,40 @@ CREATE TABLE IF NOT EXISTS `taikhoan` (
   `BiXoa` tinyint(1) DEFAULT '0',
   `MaLoaiTaiKhoan` int(11) NOT NULL,
   `code` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `changepass` int(11) DEFAULT NULL,
   PRIMARY KEY (`MaTaiKhoan`),
   KEY `fk_TaiKhoan_LoaiTaiKhoan_idx` (`MaLoaiTaiKhoan`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `taikhoan`
 --
 
-INSERT INTO `taikhoan` (`MaTaiKhoan`, `TenDangNhap`, `MatKhau`, `TenHienThi`, `DiaChi`, `DienThoai`, `Email`, `BiXoa`, `MaLoaiTaiKhoan`, `code`) VALUES
-(1, 'ndhuy', 'ndhuy', 'Đức Huy', '227 - Nguyễn Văn Cừ - Q.5', '01234567890', 'ndhuy@gmail.com', 0, 1, NULL),
-(2, 'admin', 'admin', 'Admin website', 'Smartphone Store', '0909123456', 'admin@smartphonestore.vn', 0, 2, NULL),
-(3, 'sanhtuan', '', 'Sanh Tuấn', 'Hồ Chí Minh', '0342250192', 'st123@gmail.com', 1, 1, NULL),
-(4, 'sanhtuan123', 'st12345', 'Sao Cũng Được', 'Linh Trung, Thủ Đức, TP.Hồ Chí Minh', '0342250192', 'st123@gmail.com', 0, 2, NULL),
-(8, 'anhkiet', '1', 'Giang', 'deqwewq', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, NULL);
+INSERT INTO `taikhoan` (`MaTaiKhoan`, `TenDangNhap`, `MatKhau`, `TenHienThi`, `DiaChi`, `DienThoai`, `Email`, `BiXoa`, `MaLoaiTaiKhoan`, `code`, `changepass`) VALUES
+(2, 'admin', 'admin', 'Quản trị', 'Smartphone Store', '0909123456', 'admin@smartphonestore.vn', 0, 2, NULL, NULL),
+(8, 'anhkiet', '1', 'Giang', 'deqwewq', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, NULL, NULL),
+(9, 'anhkiet2', '1', 'Giang', '5a/5 Tran Phu', '', 'giangkiet.a1@gmail.com', 0, 1, 'TZng3yjV7l', NULL),
+(10, 'anhkiet3', '1', 'Giang', 'deqwewq', '', 'giangkiet.a1@gmail.com', 0, 1, 'PM1u5cB7Pr', NULL),
+(11, 'anhkiet4', '1', 'Giang', 'deqwewq', '', 'giangkiet.a1@gmail.com', 0, 1, 'ywh1QzdLrQ', NULL),
+(12, 'anhkiet5', '1', 'Giang', 'deqwewq', '', 'giangkiet.a1@gmail.com', 0, 1, 'l4LH0cVk3U', NULL),
+(13, 'anhkiet6', '1', 'Giang', 'deqwewq', '', 'giangkiet.a1@gmail.com', 0, 1, 'D6shVjPyuj', NULL),
+(14, 'anhkiet7', '1', 'Giang', 'deqwewq', '', 'giangkiet.a1@gmail.com', 0, 1, 'giK5QwMClB', NULL),
+(15, 'anhkiet8', '1', 'Giang', 'deqwewq', '', 'giangkiet.a1@gmail.com', 0, 1, 'TzHdPi1JHd', NULL),
+(16, 'anhkiet9', '1', 'Giang', 'deqwewq', '', 'giangkiet.a1@gmail.com', 0, 1, 'ZlYiCgWAaI', NULL),
+(17, 'anhkiet10', '1', 'Giang', 'deqwewq', '', 'giangkiet.a1@gmail.com', 0, 1, 'rODUJulDwv', NULL),
+(18, 'anhkiet11', '1', 'Giang', 'deqwewq', '', 'giangkiet.a1@gmail.com', 0, 1, 'YPvKrvC46H', NULL),
+(19, 'anhkiet12', '1', 'Giang', 'deqwewq', '', 'giangkiet.a1@gmail.com', 0, 1, 'U0qPji7aG0', NULL),
+(20, 'anhkiet1111', '1', 'Giang', 'deqwewq', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, 'UzDIo9UR9v', NULL),
+(21, 'anhkiet1112', '1', 'Giang', 'deqwewq', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, 'YzRDt7WugH', NULL),
+(22, 'anhkiet1122', '1', 'Giang', 'deqwewq', '', 'giangkiet.a1@gmail.com', 0, 1, 'Mc1e2jun3R', NULL),
+(23, 'anhkiet1133', '1', 'Giang', 'deqwewq', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, NULL, NULL),
+(24, 'anhkiet1123', '1', 'Giang', 'deqwewq', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, NULL, NULL),
+(25, 'anhkiet32', '1', 'Giang', 'deqwewq', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, 'f3GE6RdgQz', NULL),
+(26, 'grinfs', '1', '123', '123', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, NULL, NULL),
+(27, 'anhkiet22', '1', 'Giang', 'deqwewq', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, NULL, NULL),
+(28, 'anhkiet33', '1', 'Giang', 'deqwewq', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, NULL, NULL),
+(29, 'anhkiet44', '1', 'Giang', 'deqwewq', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, NULL, NULL),
+(30, 'anhkiet41', '123', 'Giang', 'deqwewq', '0355286781', 'giangkiet.a1@gmail.com', 0, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
