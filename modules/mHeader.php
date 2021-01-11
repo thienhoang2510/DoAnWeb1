@@ -11,7 +11,7 @@ $side = $_GET["side"];
 <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
   <div class="container">
     <a class="navbar-brand" href="index.php"><strong>Shoes Store</strong></a>
-<a href="index.html">
+<a href="index.php">
                                 <img src="imgs/logo/logo.jpg" width=50px height=50px alt="Logo">
                             </a>
     <!-- mobile button  -->
