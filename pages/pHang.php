@@ -1,5 +1,5 @@
 <?php
-$sql = "select * from hangsanxuat";
+$sql = "select * from hangsanxuat where BiXoa = 0";
 $result = DataProvider::ExecuteQuery($sql);
 ?>
 
