@@ -38,7 +38,7 @@
           $row1 = mysqli_fetch_array($result1);
 
           $id = $row1["MaTaiKhoan"];
-          sendEmail($mail,'Kích hoạt tài khoản','Vui lòng click vào link <a href="http://acctive:8080/activate.php?id=' . $id . '&code=' . $code . '"> kích hoạt tài khoản.</a>');
+          sendEmail($mail,'Kích hoạt tài khoản','Vui lòng click vào link <a href="http://web1:8080/activate.php?id=' . $id . '&code=' . $code . '"> kích hoạt tài khoản.</a>');
 
           $msg = "Vui lòng xác thực tài khoản trước khi đăng nhập!";
           echo '<script type="text/javascript">alert("' . $msg . '")</script>';
